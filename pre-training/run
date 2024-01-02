@@ -1,0 +1,13 @@
+#!/bin/bash
+
+# Prompt the user for input
+read -p "Enter path to the file that you'd like to run: " arg1
+
+# Extract the file name from the path
+python_file_name=$(basename "$arg1")
+
+# Run the Python file with provided arguments
+nohup python "$arg1" > ./${python_file_name%,*}.log 2>&1 &
+
+# Save the PID to a file with the Python file name
+echo $! > ./PID_"${python_file_name%.*}".txt

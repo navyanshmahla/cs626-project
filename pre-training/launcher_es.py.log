@@ -1,0 +1,289 @@
+/raid/KCDH/kshitij/LogiGAN/ContextualSP-logigan/logigan/cs626/lib/python3.10/site-packages/torch/distributed/launch.py:181: FutureWarning: The module torch.distributed.launch is deprecated
+and will be removed in future. Use torchrun.
+Note that --use-env is set by default in torchrun.
+If your script expects `--local-rank` argument to be set, please
+change it to read from `os.environ['LOCAL_RANK']` instead. See 
+https://pytorch.org/docs/stable/distributed.html#launch-utility for 
+further instructions
+
+  warnings.warn(
+[2023-11-29 20:33:11,434] torch.distributed.run: [WARNING] 
+[2023-11-29 20:33:11,434] torch.distributed.run: [WARNING] *****************************************
+[2023-11-29 20:33:11,434] torch.distributed.run: [WARNING] Setting OMP_NUM_THREADS environment variable for each process to be 1 in default, to avoid your system being overloaded, please further tune the variable for optimal performance in your application as needed. 
+[2023-11-29 20:33:11,434] torch.distributed.run: [WARNING] *****************************************
+[W socket.cpp:436] [c10d] The server socket has failed to bind to [::]:29500 (errno: 98 - Address already in use).
+[W socket.cpp:436] [c10d] The server socket has failed to bind to ?UNKNOWN? (errno: 98 - Address already in use).
+[E socket.cpp:472] [c10d] The server socket has failed to listen on any local network address.
+Traceback (most recent call last):
+  File "/raid/KCDH/kshitij/miniconda3/lib/python3.10/runpy.py", line 196, in _run_module_as_main
+    return _run_code(code, main_globals, None,
+  File "/raid/KCDH/kshitij/miniconda3/lib/python3.10/runpy.py", line 86, in _run_code
+    exec(code, run_globals)
+  File "/raid/KCDH/kshitij/LogiGAN/ContextualSP-logigan/logigan/cs626/lib/python3.10/site-packages/torch/distributed/launch.py", line 196, in <module>
+    main()
+  File "/raid/KCDH/kshitij/LogiGAN/ContextualSP-logigan/logigan/cs626/lib/python3.10/site-packages/torch/distributed/launch.py", line 192, in main
+    launch(args)
+  File "/raid/KCDH/kshitij/LogiGAN/ContextualSP-logigan/logigan/cs626/lib/python3.10/site-packages/torch/distributed/launch.py", line 177, in launch
+    run(args)
+  File "/raid/KCDH/kshitij/LogiGAN/ContextualSP-logigan/logigan/cs626/lib/python3.10/site-packages/torch/distributed/run.py", line 797, in run
+    elastic_launch(
+  File "/raid/KCDH/kshitij/LogiGAN/ContextualSP-logigan/logigan/cs626/lib/python3.10/site-packages/torch/distributed/launcher/api.py", line 134, in __call__
+    return launch_agent(self._config, self._entrypoint, list(args))
+  File "/raid/KCDH/kshitij/LogiGAN/ContextualSP-logigan/logigan/cs626/lib/python3.10/site-packages/torch/distributed/launcher/api.py", line 255, in launch_agent
+    result = agent.run()
+  File "/raid/KCDH/kshitij/LogiGAN/ContextualSP-logigan/logigan/cs626/lib/python3.10/site-packages/torch/distributed/elastic/metrics/api.py", line 124, in wrapper
+    result = f(*args, **kwargs)
+  File "/raid/KCDH/kshitij/LogiGAN/ContextualSP-logigan/logigan/cs626/lib/python3.10/site-packages/torch/distributed/elastic/agent/server/api.py", line 736, in run
+    result = self._invoke_run(role)
+  File "/raid/KCDH/kshitij/LogiGAN/ContextualSP-logigan/logigan/cs626/lib/python3.10/site-packages/torch/distributed/elastic/agent/server/api.py", line 871, in _invoke_run
+    self._initialize_workers(self._worker_group)
+  File "/raid/KCDH/kshitij/LogiGAN/ContextualSP-logigan/logigan/cs626/lib/python3.10/site-packages/torch/distributed/elastic/metrics/api.py", line 124, in wrapper
+    result = f(*args, **kwargs)
+  File "/raid/KCDH/kshitij/LogiGAN/ContextualSP-logigan/logigan/cs626/lib/python3.10/site-packages/torch/distributed/elastic/agent/server/api.py", line 705, in _initialize_workers
+    self._rendezvous(worker_group)
+  File "/raid/KCDH/kshitij/LogiGAN/ContextualSP-logigan/logigan/cs626/lib/python3.10/site-packages/torch/distributed/elastic/metrics/api.py", line 124, in wrapper
+    result = f(*args, **kwargs)
+  File "/raid/KCDH/kshitij/LogiGAN/ContextualSP-logigan/logigan/cs626/lib/python3.10/site-packages/torch/distributed/elastic/agent/server/api.py", line 546, in _rendezvous
+    store, group_rank, group_world_size = spec.rdzv_handler.next_rendezvous()
+  File "/raid/KCDH/kshitij/LogiGAN/ContextualSP-logigan/logigan/cs626/lib/python3.10/site-packages/torch/distributed/elastic/rendezvous/static_tcp_rendezvous.py", line 54, in next_rendezvous
+    self._store = TCPStore(  # type: ignore[call-arg]
+RuntimeError: The server socket has failed to listen on any local network address. The server socket has failed to bind to [::]:29500 (errno: 98 - Address already in use). The server socket has failed to bind to ?UNKNOWN? (errno: 98 - Address already in use).
+run_hf.sh: 4: --model_name_or_path: not found
+run_hf.sh: 5: --output_dir: not found
+run_hf.sh: 6: --data_dir: not found
+run_hf.sh: 7: --train_file: not found
+run_hf.sh: 8: --validation_file: not found
+run_hf.sh: 9: --per_device_train_batch_size: not found
+run_hf.sh: 10: --gradient_accumulation_steps: not found
+run_hf.sh: 11: --learning_rate: not found
+run_hf.sh: 12: --num_train_epochs: not found
+run_hf.sh: 13: --seed: not found
+run_hf.sh: 14: --remove_unused_columns: not found
+run_hf.sh: 15: --num_beams: not found
+run_hf.sh: 16: --save_strategy: not found
+run_hf.sh: 17: --evaluation_strategy: not found
+run_hf.sh: 18: --logging_steps: not found
+run_hf.sh: 19: --max_train_samples: not found
+run_hf.sh: 20: --max_predict_samples: not found
+run_hf.sh: 21: --predict_with_generate: not found
+run_hf.sh: 22: --do_predict: not found
+run_hf.sh: 23: --test_file: not found
+run_hf.sh: 24: --do_eval: not found
+run_hf.sh: 25: --do_train: not found
+run_hf.sh: 26: --max_eval_samples: not found
+run_hf.sh: 27: --prediction_mode: not found
+run_hf.sh: 28: --gan_alpha: not found
+run_hf.sh: 29: --per_device_eval_batch_size: not found
+run_hf.sh: 30: --overwrite_cache
+: not found
+run_hf.sh: 31: --overwrite_output_dir
+: not found
+run_hf.sh: 32: 
+: not found
+/raid/KCDH/kshitij/LogiGAN/ContextualSP-logigan/logigan/cs626/lib/python3.10/site-packages/torch/distributed/launch.py:181: FutureWarning: The module torch.distributed.launch is deprecated
+and will be removed in future. Use torchrun.
+Note that --use-env is set by default in torchrun.
+If your script expects `--local-rank` argument to be set, please
+change it to read from `os.environ['LOCAL_RANK']` instead. See 
+https://pytorch.org/docs/stable/distributed.html#launch-utility for 
+further instructions
+
+  warnings.warn(
+[2023-11-29 20:33:13,517] torch.distributed.run: [WARNING] 
+[2023-11-29 20:33:13,517] torch.distributed.run: [WARNING] *****************************************
+[2023-11-29 20:33:13,517] torch.distributed.run: [WARNING] Setting OMP_NUM_THREADS environment variable for each process to be 1 in default, to avoid your system being overloaded, please further tune the variable for optimal performance in your application as needed. 
+[2023-11-29 20:33:13,517] torch.distributed.run: [WARNING] *****************************************
+[W socket.cpp:436] [c10d] The server socket has failed to bind to [::]:29500 (errno: 98 - Address already in use).
+[W socket.cpp:436] [c10d] The server socket has failed to bind to ?UNKNOWN? (errno: 98 - Address already in use).
+[E socket.cpp:472] [c10d] The server socket has failed to listen on any local network address.
+Traceback (most recent call last):
+  File "/raid/KCDH/kshitij/miniconda3/lib/python3.10/runpy.py", line 196, in _run_module_as_main
+    return _run_code(code, main_globals, None,
+  File "/raid/KCDH/kshitij/miniconda3/lib/python3.10/runpy.py", line 86, in _run_code
+    exec(code, run_globals)
+  File "/raid/KCDH/kshitij/LogiGAN/ContextualSP-logigan/logigan/cs626/lib/python3.10/site-packages/torch/distributed/launch.py", line 196, in <module>
+    main()
+  File "/raid/KCDH/kshitij/LogiGAN/ContextualSP-logigan/logigan/cs626/lib/python3.10/site-packages/torch/distributed/launch.py", line 192, in main
+    launch(args)
+  File "/raid/KCDH/kshitij/LogiGAN/ContextualSP-logigan/logigan/cs626/lib/python3.10/site-packages/torch/distributed/launch.py", line 177, in launch
+    run(args)
+  File "/raid/KCDH/kshitij/LogiGAN/ContextualSP-logigan/logigan/cs626/lib/python3.10/site-packages/torch/distributed/run.py", line 797, in run
+    elastic_launch(
+  File "/raid/KCDH/kshitij/LogiGAN/ContextualSP-logigan/logigan/cs626/lib/python3.10/site-packages/torch/distributed/launcher/api.py", line 134, in __call__
+    return launch_agent(self._config, self._entrypoint, list(args))
+  File "/raid/KCDH/kshitij/LogiGAN/ContextualSP-logigan/logigan/cs626/lib/python3.10/site-packages/torch/distributed/launcher/api.py", line 255, in launch_agent
+    result = agent.run()
+  File "/raid/KCDH/kshitij/LogiGAN/ContextualSP-logigan/logigan/cs626/lib/python3.10/site-packages/torch/distributed/elastic/metrics/api.py", line 124, in wrapper
+    result = f(*args, **kwargs)
+  File "/raid/KCDH/kshitij/LogiGAN/ContextualSP-logigan/logigan/cs626/lib/python3.10/site-packages/torch/distributed/elastic/agent/server/api.py", line 736, in run
+    result = self._invoke_run(role)
+  File "/raid/KCDH/kshitij/LogiGAN/ContextualSP-logigan/logigan/cs626/lib/python3.10/site-packages/torch/distributed/elastic/agent/server/api.py", line 871, in _invoke_run
+    self._initialize_workers(self._worker_group)
+  File "/raid/KCDH/kshitij/LogiGAN/ContextualSP-logigan/logigan/cs626/lib/python3.10/site-packages/torch/distributed/elastic/metrics/api.py", line 124, in wrapper
+    result = f(*args, **kwargs)
+  File "/raid/KCDH/kshitij/LogiGAN/ContextualSP-logigan/logigan/cs626/lib/python3.10/site-packages/torch/distributed/elastic/agent/server/api.py", line 705, in _initialize_workers
+    self._rendezvous(worker_group)
+  File "/raid/KCDH/kshitij/LogiGAN/ContextualSP-logigan/logigan/cs626/lib/python3.10/site-packages/torch/distributed/elastic/metrics/api.py", line 124, in wrapper
+    result = f(*args, **kwargs)
+  File "/raid/KCDH/kshitij/LogiGAN/ContextualSP-logigan/logigan/cs626/lib/python3.10/site-packages/torch/distributed/elastic/agent/server/api.py", line 546, in _rendezvous
+    store, group_rank, group_world_size = spec.rdzv_handler.next_rendezvous()
+  File "/raid/KCDH/kshitij/LogiGAN/ContextualSP-logigan/logigan/cs626/lib/python3.10/site-packages/torch/distributed/elastic/rendezvous/static_tcp_rendezvous.py", line 54, in next_rendezvous
+    self._store = TCPStore(  # type: ignore[call-arg]
+RuntimeError: The server socket has failed to listen on any local network address. The server socket has failed to bind to [::]:29500 (errno: 98 - Address already in use). The server socket has failed to bind to ?UNKNOWN? (errno: 98 - Address already in use).
+/raid/KCDH/kshitij/LogiGAN/ContextualSP-logigan/logigan/cs626/lib/python3.10/site-packages/torch/distributed/launch.py:181: FutureWarning: The module torch.distributed.launch is deprecated
+and will be removed in future. Use torchrun.
+Note that --use-env is set by default in torchrun.
+If your script expects `--local-rank` argument to be set, please
+change it to read from `os.environ['LOCAL_RANK']` instead. See 
+https://pytorch.org/docs/stable/distributed.html#launch-utility for 
+further instructions
+
+  warnings.warn(
+[2023-11-29 20:33:15,598] torch.distributed.run: [WARNING] 
+[2023-11-29 20:33:15,598] torch.distributed.run: [WARNING] *****************************************
+[2023-11-29 20:33:15,598] torch.distributed.run: [WARNING] Setting OMP_NUM_THREADS environment variable for each process to be 1 in default, to avoid your system being overloaded, please further tune the variable for optimal performance in your application as needed. 
+[2023-11-29 20:33:15,598] torch.distributed.run: [WARNING] *****************************************
+[W socket.cpp:436] [c10d] The server socket has failed to bind to [::]:29500 (errno: 98 - Address already in use).
+[W socket.cpp:436] [c10d] The server socket has failed to bind to ?UNKNOWN? (errno: 98 - Address already in use).
+[E socket.cpp:472] [c10d] The server socket has failed to listen on any local network address.
+Traceback (most recent call last):
+  File "/raid/KCDH/kshitij/miniconda3/lib/python3.10/runpy.py", line 196, in _run_module_as_main
+    return _run_code(code, main_globals, None,
+  File "/raid/KCDH/kshitij/miniconda3/lib/python3.10/runpy.py", line 86, in _run_code
+    exec(code, run_globals)
+  File "/raid/KCDH/kshitij/LogiGAN/ContextualSP-logigan/logigan/cs626/lib/python3.10/site-packages/torch/distributed/launch.py", line 196, in <module>
+    main()
+  File "/raid/KCDH/kshitij/LogiGAN/ContextualSP-logigan/logigan/cs626/lib/python3.10/site-packages/torch/distributed/launch.py", line 192, in main
+    launch(args)
+  File "/raid/KCDH/kshitij/LogiGAN/ContextualSP-logigan/logigan/cs626/lib/python3.10/site-packages/torch/distributed/launch.py", line 177, in launch
+    run(args)
+  File "/raid/KCDH/kshitij/LogiGAN/ContextualSP-logigan/logigan/cs626/lib/python3.10/site-packages/torch/distributed/run.py", line 797, in run
+    elastic_launch(
+  File "/raid/KCDH/kshitij/LogiGAN/ContextualSP-logigan/logigan/cs626/lib/python3.10/site-packages/torch/distributed/launcher/api.py", line 134, in __call__
+    return launch_agent(self._config, self._entrypoint, list(args))
+  File "/raid/KCDH/kshitij/LogiGAN/ContextualSP-logigan/logigan/cs626/lib/python3.10/site-packages/torch/distributed/launcher/api.py", line 255, in launch_agent
+    result = agent.run()
+  File "/raid/KCDH/kshitij/LogiGAN/ContextualSP-logigan/logigan/cs626/lib/python3.10/site-packages/torch/distributed/elastic/metrics/api.py", line 124, in wrapper
+    result = f(*args, **kwargs)
+  File "/raid/KCDH/kshitij/LogiGAN/ContextualSP-logigan/logigan/cs626/lib/python3.10/site-packages/torch/distributed/elastic/agent/server/api.py", line 736, in run
+    result = self._invoke_run(role)
+  File "/raid/KCDH/kshitij/LogiGAN/ContextualSP-logigan/logigan/cs626/lib/python3.10/site-packages/torch/distributed/elastic/agent/server/api.py", line 871, in _invoke_run
+    self._initialize_workers(self._worker_group)
+  File "/raid/KCDH/kshitij/LogiGAN/ContextualSP-logigan/logigan/cs626/lib/python3.10/site-packages/torch/distributed/elastic/metrics/api.py", line 124, in wrapper
+    result = f(*args, **kwargs)
+  File "/raid/KCDH/kshitij/LogiGAN/ContextualSP-logigan/logigan/cs626/lib/python3.10/site-packages/torch/distributed/elastic/agent/server/api.py", line 705, in _initialize_workers
+    self._rendezvous(worker_group)
+  File "/raid/KCDH/kshitij/LogiGAN/ContextualSP-logigan/logigan/cs626/lib/python3.10/site-packages/torch/distributed/elastic/metrics/api.py", line 124, in wrapper
+    result = f(*args, **kwargs)
+  File "/raid/KCDH/kshitij/LogiGAN/ContextualSP-logigan/logigan/cs626/lib/python3.10/site-packages/torch/distributed/elastic/agent/server/api.py", line 546, in _rendezvous
+    store, group_rank, group_world_size = spec.rdzv_handler.next_rendezvous()
+  File "/raid/KCDH/kshitij/LogiGAN/ContextualSP-logigan/logigan/cs626/lib/python3.10/site-packages/torch/distributed/elastic/rendezvous/static_tcp_rendezvous.py", line 54, in next_rendezvous
+    self._store = TCPStore(  # type: ignore[call-arg]
+RuntimeError: The server socket has failed to listen on any local network address. The server socket has failed to bind to [::]:29500 (errno: 98 - Address already in use). The server socket has failed to bind to ?UNKNOWN? (errno: 98 - Address already in use).
+run_hf.sh: 4: --model_name_or_path: not found
+run_hf.sh: 5: --output_dir: not found
+run_hf.sh: 6: --data_dir: not found
+run_hf.sh: 7: --train_file: not found
+run_hf.sh: 8: --validation_file: not found
+run_hf.sh: 9: --per_device_train_batch_size: not found
+run_hf.sh: 10: --gradient_accumulation_steps: not found
+run_hf.sh: 11: --learning_rate: not found
+run_hf.sh: 12: --num_train_epochs: not found
+run_hf.sh: 13: --seed: not found
+run_hf.sh: 14: --remove_unused_columns: not found
+run_hf.sh: 15: --num_beams: not found
+run_hf.sh: 16: --save_strategy: not found
+run_hf.sh: 17: --evaluation_strategy: not found
+run_hf.sh: 18: --logging_steps: not found
+run_hf.sh: 19: --max_train_samples: not found
+run_hf.sh: 20: --max_predict_samples: not found
+run_hf.sh: 21: --predict_with_generate: not found
+run_hf.sh: 22: --do_predict: not found
+run_hf.sh: 23: --test_file: not found
+run_hf.sh: 24: --do_eval: not found
+run_hf.sh: 25: --do_train: not found
+run_hf.sh: 26: --max_eval_samples: not found
+run_hf.sh: 27: --prediction_mode: not found
+run_hf.sh: 28: --gan_alpha: not found
+run_hf.sh: 29: --per_device_eval_batch_size: not found
+run_hf.sh: 30: --overwrite_cache
+: not found
+run_hf.sh: 31: --overwrite_output_dir
+: not found
+run_hf.sh: 32: 
+: not found
+
+
+
+=================  iter 1   ============================
+STEP 1
+
+Launching cmd:
+sh run_hf.sh ./warmup/fine-tuned-model/gen/gen_model.bin ./checkpoints/gen gen_train_src_es.jsonl  ./warmup/fine-tuned-model/logigan-base 4 8 5e-05 1 1701270189 100 80 True ver_train_es.jsonl False ver 5 0.8 3
+
+========================================================
+
+=================  iter 1   ============================
+STEP 2
+
+Launching cmd:
+sh run_ver_es.sh ./warmup/fine-tuned-model/ver/ver_model.bin ./checkpoints/ver
+
+========================================================
+
+=================  iter 1   ============================
+STEP 3
+
+Launching cmd:
+sh run_hf.sh ./warmup/fine-tuned-model/gen/gen_model.bin ./checkpoints/gen gen_train_src_es.jsonl  ./warmup/fine-tuned-model/logigan-base 4 8 5e-05 1 1701270194 100 100 False gen_train_src_es_toy.jsonl True gen 5 0.8 3
+
+========================================================
+
+
+=================  iter 2   ============================
+STEP 1
+
+Launching cmd:
+sh run_hf.sh ./warmup/fine-tuned-model/gen/gen_model.bin ./checkpoints/gen gen_train_src_es.jsonl  ./warmup/fine-tuned-model/logigan-base 4 8 5e-05 1 1701270189 100 80 True ver_train_es.jsonl False ver 5 0.8 3
+
+========================================================
+
+=================  iter 2   ============================
+STEP 2
+
+Launching cmd:
+sh run_ver_es.sh ./warmup/fine-tuned-model/ver/ver_model.bin ./checkpoints/ver
+
+========================================================
+
+=================  iter 2   ============================
+STEP 3
+
+Launching cmd:
+sh run_hf.sh ./warmup/fine-tuned-model/gen/gen_model.bin ./checkpoints/gen gen_train_src_es.jsonl  ./warmup/fine-tuned-model/logigan-base 4 8 5e-05 1 1701270194 100 100 False gen_train_src_es_toy.jsonl True gen 5 0.8 3
+
+========================================================
+
+=================  iter 3  ============================
+STEP 1
+
+Launching cmd:
+sh run_hf.sh ./warmup/fine-tuned-model/gen/gen_model.bin ./checkpoints/gen gen_train_src_es.jsonl  ./warmup/fine-tuned-model/logigan-base 4 8 5e-05 1 1701270189 100 80 True ver_train_es.jsonl False ver 5 0.8 3
+
+========================================================
+
+=================  iter 3   ============================
+STEP 2
+
+Launching cmd:
+sh run_ver_es.sh ./warmup/fine-tuned-model/ver/ver_model.bin ./checkpoints/ver
+
+========================================================
+
+=================  iter 3   ============================
+STEP 3
+
+Launching cmd:
+sh run_hf.sh ./warmup/fine-tuned-model/gen/gen_model.bin ./checkpoints/gen gen_train_src_es.jsonl  ./warmup/fine-tuned-model/logigan-base 4 8 5e-05 1 1701270194 100 100 False gen_train_src_es_toy.jsonl True gen 5 0.8 3
+
+========================================================
